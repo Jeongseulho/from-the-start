@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Red Hat Text", sans-serif;
+  text-align: center;
+  background-image: url(../images/bg-stars.svg);
+  background-color: hsl(236, 21%, 26%);
+  overflow: hidden;
+}
+
+section {
+  width: 100vw;
+}
+
+main {
+  position: absolute;
+  top: 100px;
+  width: 300vw;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+main > h1 {
+  margin: 0 auto;
+}
+
+.buttoncontainer {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 250px;
+  justify-content: center;
+}
+
+.buttoncontainer > button {
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 5px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.buttoncontainer > button:hover {
+  background-color: white;
+}
+
+.githubicon {
+  text-align: center;
+}
+
+.githubicon > a > img {
+  margin-top: 50px;
+  width: 70px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: wheat;
+}
+
+footer {
+  background-image: url(../images/pattern-hills.svg);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 20%;
+}
