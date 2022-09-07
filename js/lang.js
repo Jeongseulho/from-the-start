@@ -1,4 +1,6 @@
-let Javascript, CSS, HTML;
+let javascriptBytes = 0;
+let cssBytes = 0;
+let htmlBytes = 0;
 
 const getRepoNameArray = async () => {
   try {
@@ -37,25 +39,31 @@ const getLangBytes = async (repoName) => {
   }
 };
 
-const assignment = (langObj) => {};
-
 const getAllLangBytes = async () => {
   const repoNameArray = await getRepoNameArray();
-  console.log(repoNameArray);
 
-  const langPromiseArray = repoNameArray.map(
-    async (repoName) => await getLangBytes(repoName)
-  );
+  const repoLangArray = [];
 
-  console.log(
-    langPromiseArray.map((pr) => pr.then((langObj) => console.log(langObj)))
-  );
+  for (const repoName of repoNameArray) {
+    let result = await getLangBytes(repoName);
+    repoLangArray.push(result);
+  }
 
-  // console.log(AllLangBytes);
-  // return AllLangBytes;
+  repoLangArray.forEach((repoLang) => {
+    javascriptBytes += repoLang.JavaScript;
+    cssBytes += repoLang.CSS;
+    htmlBytes += repoLang.HTML;
+  });
 };
 
-getAllLangBytes();
+(async () => {
+  await getAllLangBytes();
+  console.log(javascriptBytes, cssBytes, htmlBytes);
+})();
+
+// (async () => {
+//   console.log(javascriptBytes, cssBytes, htmlBytes);
+// })();
 
 // (async () => {
 //   console.log(await getAllLangBytes());
