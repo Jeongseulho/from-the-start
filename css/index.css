@@ -34,8 +34,9 @@ main {
   transition: transform 0.5s;
 }
 
-main > h1 {
+main h1 {
   margin: 0 auto;
+  color: white;
 }
 
 .buttoncontainer {
