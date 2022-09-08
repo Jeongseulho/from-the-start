@@ -25,7 +25,7 @@
   max-width: 25%;
   display: inline-block;
   margin-top: 50px;
-  animation: donutfade 1s;
+  animation: donutfade 2s;
 }
 
 @keyframes donutfade {
@@ -46,7 +46,7 @@
   text-anchor: middle;
   color: #666;
   fill: #666;
-  animation: donutfadelong 1s;
+  animation: donutfadelong 2s;
 }
 
 .donut-lang {
@@ -54,7 +54,7 @@
   line-height: 1;
   transform: translateY(0.5em);
   font-weight: bold;
-  animation: donutfadelong 1s;
+  animation: donutfadelong 2s;
 }
 
 html {

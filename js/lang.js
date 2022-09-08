@@ -1,4 +1,9 @@
 // github api로 모든 repo의 언어별 bytes 가져오기
+
+import token from "./token.js";
+
+const github_token = token;
+
 let javascriptBytes = 0;
 let cssBytes = 0;
 let htmlBytes = 0;
@@ -22,7 +27,7 @@ const getRepoNameArray = async () => {
       {
         method: "GET",
         headers: {
-          Authorization: "token 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",
+          Authorization: `token ${github_token}`,
         },
       }
     );
@@ -30,7 +35,7 @@ const getRepoNameArray = async () => {
     const result = data.map((repo) => repo.name);
     return result;
   } catch (error) {
-    console.log(error);
+    console.log("에러", error);
   }
 };
 
@@ -41,14 +46,14 @@ const getLangBytes = async (repoName) => {
       {
         method: "GET",
         headers: {
-          Authorization: "token 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",
+          Authorization: `token ${github_token}`,
         },
       }
     );
     const result = await response.json();
     return result;
   } catch (error) {
-    console.log(error);
+    console.log("에러", error);
   }
 };
 
