@@ -1,4 +1,6 @@
 const buttons = document.querySelectorAll(".buttoncontainer > button");
+const langbutton = document.querySelector(".buttoncontainer > .lang-button");
+const lang = document.querySelector(".lang");
 
 buttons.forEach((button, index) =>
   button.addEventListener(

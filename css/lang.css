@@ -8,59 +8,6 @@
 
 .donut-segment {
   transform-origin: center;
-  stroke: #ff6200;
-}
-
-.donut-segment-css {
-  stroke: skyblue;
-  animation: donut1 3s;
-}
-
-.donut-segment-js {
-  stroke: #edc70a;
-  animation: donut2 3s;
-}
-
-.donut-text {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.donut-text-css {
-  fill: skyblue;
-}
-.donut-text-js {
-  fill: #edc70a;
-}
-.donut-text-html {
-  fill: #ff6200;
-}
-
-.chart {
-  width: 100%;
-  font-size: 16px;
-  animation: donutfade 1s;
-  max-width: 25%;
-  display: inline-block;
-  margin-top: 50px;
-}
-
-@keyframes donutfade {
-  /* this applies to the whole svg item wrapper */
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 992px) {
-  .svg-item {
-    width: 80%;
-  }
-}
-
-.donut-percent {
-  animation: donutfadelong 1s;
 }
 
 @keyframes donutfadelong {
@@ -72,38 +19,23 @@
   }
 }
 
-@keyframes donut1 {
-  0% {
-    stroke-dasharray: 0, 100;
-  }
-  100% {
-    stroke-dasharray: 69, 31;
-  }
+.chart {
+  width: 100%;
+  font-size: 16px;
+  max-width: 25%;
+  display: inline-block;
+  margin-top: 50px;
+  animation: donutfade 1s;
 }
 
-@keyframes donut2 {
+@keyframes donutfade {
+  /* this applies to the whole svg item wrapper */
   0% {
-    stroke-dasharray: 0, 100;
+    opacity: 0.2;
   }
   100% {
-    stroke-dasharray: 30, 70;
+    opacity: 1;
   }
-}
-
-@keyframes donut3 {
-  0% {
-    stroke-dasharray: 0, 100;
-  }
-  100% {
-    stroke-dasharray: 1, 99;
-  }
-}
-
-.donut-percent {
-  font-size: 0.5em;
-  line-height: 1;
-  transform: translateY(0.5em);
-  font-weight: bold;
 }
 
 .donut-data {
@@ -117,8 +49,42 @@
   animation: donutfadelong 1s;
 }
 
-/* ---------- */
-/* just for this presentation */
+.donut-lang {
+  font-size: 0.5em;
+  line-height: 1;
+  transform: translateY(0.5em);
+  font-weight: bold;
+  animation: donutfadelong 1s;
+}
+
 html {
   text-align: center;
+}
+
+.donut-segment-html {
+  animation: dounthmtml 3s;
+  stroke: #ff6200;
+}
+
+.donut-segment-css {
+  stroke: skyblue;
+  animation: donutcss 3s;
+}
+
+.donut-segment-js {
+  stroke: #edc70a;
+  animation: donutjs 3s;
+}
+
+.donut-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.donut-text-css {
+  fill: skyblue;
+}
+.donut-text-js {
+  fill: #edc70a;
+}
+.donut-text-html {
+  fill: #ff6200;
 }
