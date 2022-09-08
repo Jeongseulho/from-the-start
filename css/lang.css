@@ -1,0 +1,124 @@
+.lang > h3 {
+  color: #ece6cc;
+}
+
+.donut-ring {
+  stroke: #ebebeb;
+}
+
+.donut-segment {
+  transform-origin: center;
+  stroke: #ff6200;
+}
+
+.donut-segment-css {
+  stroke: skyblue;
+  animation: donut1 3s;
+}
+
+.donut-segment-js {
+  stroke: #edc70a;
+  animation: donut2 3s;
+}
+
+.donut-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.donut-text-css {
+  fill: skyblue;
+}
+.donut-text-js {
+  fill: #edc70a;
+}
+.donut-text-html {
+  fill: #ff6200;
+}
+
+.chart {
+  width: 100%;
+  font-size: 16px;
+  animation: donutfade 1s;
+  max-width: 25%;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+@keyframes donutfade {
+  /* this applies to the whole svg item wrapper */
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .svg-item {
+    width: 80%;
+  }
+}
+
+.donut-percent {
+  animation: donutfadelong 1s;
+}
+
+@keyframes donutfadelong {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes donut1 {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+  100% {
+    stroke-dasharray: 69, 31;
+  }
+}
+
+@keyframes donut2 {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+  100% {
+    stroke-dasharray: 30, 70;
+  }
+}
+
+@keyframes donut3 {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+  100% {
+    stroke-dasharray: 1, 99;
+  }
+}
+
+.donut-percent {
+  font-size: 0.5em;
+  line-height: 1;
+  transform: translateY(0.5em);
+  font-weight: bold;
+}
+
+.donut-data {
+  font-size: 0.12em;
+  line-height: 1;
+  transform: translateY(0.5em);
+  text-align: center;
+  text-anchor: middle;
+  color: #666;
+  fill: #666;
+  animation: donutfadelong 1s;
+}
+
+/* ---------- */
+/* just for this presentation */
+html {
+  text-align: center;
+}

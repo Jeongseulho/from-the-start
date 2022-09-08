@@ -1,3 +1,4 @@
+// github api로 모든 repo의 언어별 bytes 가져오기
 let javascriptBytes = 0;
 let cssBytes = 0;
 let htmlBytes = 0;
@@ -60,28 +61,3 @@ const getAllLangBytes = async () => {
   await getAllLangBytes();
   console.log(javascriptBytes, cssBytes, htmlBytes);
 })();
-
-// (async () => {
-//   console.log(javascriptBytes, cssBytes, htmlBytes);
-// })();
-
-// (async () => {
-//   console.log(await getAllLangBytes());
-// })();
-
-// const getAllLangBytes = async () => {
-//   const repoNameArray = await getRepoNameArray();
-//   console.log(repoNameArray);
-//   const AllLangBytes =  repoNameArray.map((repoName) =>
-//      getLangBytes(repoName)
-//   );
-//   console.log(AllLangBytes);
-// };
-
-// getAllLangBytes();
-
-// getRepoNameArray().forEach((repoName) => console.log(repoName));
-
-// (async () => {
-//   console.log(await getLangBytes(repoNameArray[0]));
-// })();
