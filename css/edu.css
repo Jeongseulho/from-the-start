@@ -1,29 +1,28 @@
-.edu p {
-  max-width: 60ch;
-}
-
 .edu a {
   color: currentcolor;
 }
 
+.profile__name {
+  color: white;
+}
+
+.team {
+  position: relative;
+}
+
 /* Utilities */
 .auto-grid {
+  width: 50%;
+  position: absolute;
+  left: 25%;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size, 14rem), 1fr)
-  );
-  grid-gap: var(--auto-grid-gap, 0);
-  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  list-style: none;
 }
 
-.flow > * + * {
-  margin-top: var(--flow-space, 1em);
-}
-
-/* Composition */
-.team {
-  --flow-space: 2em;
+.edu > * + * {
+  margin-top: 1em;
 }
 
 /* Blocks */
@@ -97,12 +96,10 @@
   margin: 0;
   z-index: -1;
   object-fit: cover;
-  filter: grayscale(1);
   transition: filter 200ms ease, transform 250ms linear;
 }
 
-.profile h2,
-.profile p {
+.profile h2 {
   transform: translateY(2ex);
 }
 
@@ -114,23 +111,13 @@
   transition: 300ms transform ease;
 }
 
-.profile p {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.profile p {
-  opacity: 0;
-  transition: 300ms opacity linear, 300ms transform ease-in-out;
-}
-
 .profile:focus {
   outline: 0.5rem solid white;
   outline-offset: -0.5rem;
 }
 
-.profile:hover :is(h2, p),
-.profile:focus :is(h2, p) {
+.profile:hover :is(h2),
+.profile:focus :is(h2) {
   transform: none;
 }
 
@@ -139,4 +126,30 @@
 .profile:hover::before,
 .profile:focus::before {
   opacity: 0.7;
+}
+
+@media only screen and (max-width: 820px) {
+  .profile h2 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .auto-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 2fr));
+  }
+  .profile h2 {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edu h1 {
+    font-size: 18px;
+    margin: 24px 0 56px;
+    letter-spacing: 6px;
+    padding: 0 20px;
+    line-height: 22px;
+    text-align: center;
+  }
 }

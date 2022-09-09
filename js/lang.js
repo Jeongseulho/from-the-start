@@ -23,13 +23,13 @@ const donut_animation_js = document.styleSheets[0].cssRules[2];
 const getRepoNameArray = async () => {
   try {
     const response = await fetch(
-      "https://api.github.com/users/Jeongseulho/repos",
-      {
-        method: "GET",
-        headers: {
-          Authorization: `token ${github_token}`,
-        },
-      }
+      "https://api.github.com/users/Jeongseulho/repos"
+      // {
+      //   method: "GET",
+      //   headers: {
+      //     Authorization: `token ${github_token}`,
+      //   },
+      // }
     );
     const data = await response.json();
     const result = data.map((repo) => repo.name);
@@ -42,13 +42,13 @@ const getRepoNameArray = async () => {
 const getLangBytes = async (repoName) => {
   try {
     const response = await fetch(
-      `https://api.github.com/repos/Jeongseulho/${repoName}/languages`,
-      {
-        method: "GET",
-        headers: {
-          Authorization: `token ${github_token}`,
-        },
-      }
+      `https://api.github.com/repos/Jeongseulho/${repoName}/languages`
+      // {
+      //   method: "GET",
+      //   headers: {
+      //     Authorization: `token ${github_token}`,
+      //   },
+      // }
     );
     const result = await response.json();
     return result;

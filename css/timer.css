@@ -158,11 +158,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-  body {
-    font-size: 8px;
-  }
-  main {
+  .timer,
+  .lang {
     padding-top: 18vh;
+    font-size: 8px;
   }
   h1 {
     font-size: 2.2em;
